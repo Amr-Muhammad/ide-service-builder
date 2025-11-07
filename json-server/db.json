@@ -1,0 +1,100 @@
+{
+  "workspaces": [
+    {
+      "id": "ws-1",
+      "name": "Tawakalna Services",
+      "path": "/mock-workspace/ws-1",
+      "createdAt": "2025-11-05T10:00:00Z"
+    },
+    {
+      "id": "ws-2",
+      "name": "TSI",
+      "path": "/mock-workspace/ws-2",
+      "createdAt": "2025-11-05T14:14:43.711Z"
+    }
+  ],
+  "services": [
+    {
+      "id": "svc-1",
+      "name": "service-1",
+      "workspaceId": "ws-1",
+      "port": 3001,
+      "status": "running",
+      "fileTree": [
+        {
+          "id": "f-1",
+          "name": "app",
+          "type": "folder",
+          "path": "app",
+          "children": [
+            {
+              "id": "f-2",
+              "name": "page.tsx",
+              "type": "file",
+              "path": "app/page.tsx"
+            },
+            {
+              "id": "f-3",
+              "name": "layout.tsx",
+              "type": "file",
+              "path": "app/layout.tsx"
+            }
+          ]
+        },
+        {
+          "id": "f-4",
+          "name": "public",
+          "type": "folder",
+          "path": "public",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "svc-2",
+      "name": "service-2",
+      "workspaceId": "ws-1",
+      "port": 3002,
+      "status": "stopped",
+      "fileTree": [
+        {
+          "id": "f-10",
+          "name": "app",
+          "type": "folder",
+          "path": "app",
+          "children": [
+            {
+              "id": "f-11",
+              "name": "page.tsx",
+              "type": "file",
+              "path": "app/page.tsx"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "id": "f-2",
+      "serviceId": "svc-1",
+      "path": "app/page.tsx",
+      "name": "page.tsx",
+      "content": "export default function Page() {\n  return (\n    <div className=\"min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800\">\n      <div className=\"text-center\">\n        <h1 className=\"text-6xl font-bold text-gray-900 dark:text-white mb-4\">\n          Service 1\n        </h1>\n        <p className=\"text-xl text-gray-600 text-white\">\n          Welcome to Tawakalna Service 1 asdads\n        </p>\n      </div>\n    </div>\n  )\n}"
+    },
+    {
+      "id": "f-3",
+      "serviceId": "svc-1",
+      "path": "app/layout.tsx",
+      "name": "layout.tsx",
+      "content": "export default function RootLayout({\n  children,\n}: {\n  children: React.ReactNode\n}) {\n  return (\n    <html lang=\"en\">\n      <body>{children}</body>\n    </html>\n  )\n}"
+    },
+    {
+      "id": "f-11",
+      "serviceId": "svc-2",
+      "path": "app/page.tsx",
+      "name": "page.tsx",
+      "content": "export default function Page() {\n  return (\n    <div className=\"min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 to-pink-100 dark:from-gray-900 dark:to-gray-800\">\n      <div className=\"text-center\">\n        <h1 className=\"text-6xl font-bold text-gray-900 dark:text-white mb-4\">\n          Service 2\n        </h1>\n        <p className=\"text-xl text-gray-600 dark:text-gray-300\">\n          Welcome to Tawakalna Service 2\n        </p>\n      </div>\n    </div>\n  )\n}"
+    }
+  ]
+}
