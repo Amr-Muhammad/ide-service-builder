@@ -54,8 +54,17 @@ export async function POST(request: NextRequest) {
 
     if (action === 'stop') {
       const server = runningServers[serviceId];
-      if (server) {
-        server.process.kill();
+      if (server && server.process.pid) {
+        console.log('server found');
+        // Windows-compatible kill
+        if (process.platform === 'win32') {
+          console.log('win');
+          
+          exec(`taskkill /PID ${server.process.pid} /T /F`);
+        } else {
+          console.log('mac / linux');
+          server.process.kill();
+        }
         delete runningServers[serviceId];
         await updateServiceStatus(serviceId, 'stopped');
       }

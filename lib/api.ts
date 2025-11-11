@@ -23,7 +23,7 @@ export async function createWorkspace(name: string): Promise<Workspace> {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       name,
-      path: `/mock-workspace/${Date.now()}`,
+      path: `/moc-workspace/${Date.now()}`,
       createdAt: new Date().toISOString(),
     }),
   });

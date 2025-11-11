@@ -89,7 +89,7 @@ export default function Home() {
                   <button
                     key={workspace.id}
                     onClick={() => handleConnectWorkspace(workspace.id)}
-                    className="w-full text-left p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-blue-500 dark:hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-gray-700 transition"
+                    className="cursor-pointer w-full text-left p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-blue-500 dark:hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-gray-700 transition"
                   >
                     <div className="font-semibold text-gray-900 dark:text-white">
                       {workspace.name}
@@ -114,7 +114,7 @@ export default function Home() {
 
             <button
               onClick={() => setShowCreateModal(true)}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-lg transition"
+              className="cursor-pointer w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-lg transition"
             >
               + Create Workspace
             </button>

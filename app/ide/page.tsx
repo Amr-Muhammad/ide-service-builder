@@ -95,7 +95,18 @@ function IDEContent() {
 
     setSaving(true);
     try {
-      await updateFileContent(openFile.id, fileContent);
+      // Call our new API that saves to both JSON Server AND disk
+      const response = await fetch('/api/files/save', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fileId: openFile.id,
+          content: fileContent,
+        }),
+      });
+
+      if (!response.ok) throw new Error('Save failed');
+
       setHasUnsavedChanges(false);
       console.log('File saved successfully');
     } catch (error) {

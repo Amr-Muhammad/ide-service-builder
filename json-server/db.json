@@ -3,13 +3,13 @@
     {
       "id": "ws-1",
       "name": "Tawakalna Services",
-      "path": "/mock-workspace/ws-1",
+      "path": "/moc-workspace/ws-1",
       "createdAt": "2025-11-05T10:00:00Z"
     },
     {
       "id": "ws-2",
       "name": "TSI",
-      "path": "/mock-workspace/ws-2",
+      "path": "/moc-workspace/ws-2",
       "createdAt": "2025-11-05T14:14:43.711Z"
     }
   ],
@@ -55,7 +55,7 @@
       "name": "service-2",
       "workspaceId": "ws-1",
       "port": 3002,
-      "status": "stopped",
+      "status": "running",
       "fileTree": [
         {
           "id": "f-10",
@@ -80,7 +80,7 @@
       "serviceId": "svc-1",
       "path": "app/page.tsx",
       "name": "page.tsx",
-      "content": "export default function Page() {\n  return (\n    <div className=\"min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800\">\n      <div className=\"text-center\">\n        <h1 className=\"text-6xl font-bold text-gray-900 dark:text-white mb-4\">\n          Service 1\n        </h1>\n        <p className=\"text-xl text-gray-600 text-white\">\n          Welcome to Tawakalna Service 1 asdads\n        </p>\n      </div>\n    </div>\n  )\n}"
+      "content": "export default function Page() {\n  return (\n    <div className=\"min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800\">\n      <div className=\"text-center\">\n        <h1 className=\"text-6xl font-bold text-white mb-4\">\n          Hello Tawakalna Service\n        </h1>\n        <p className=\"text-xl text-gray-600 text-white\">\n          Welcome to Tawakalna Service 2\n            </p>\n         <p>\n          WTF Is Wrong With You\n        </p>\n      </div>\n    </div>\n  )\n}"
     },
     {
       "id": "f-3",
